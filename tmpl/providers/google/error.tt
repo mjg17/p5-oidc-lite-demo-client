@@ -15,7 +15,7 @@
         [% END %]
     </div>
     <div>
-        <p><a href="/google">Back</a></p>
+        <p><a href="[% uri_for('/google') %]">Back</a></p>
     </div>
 </div>
 

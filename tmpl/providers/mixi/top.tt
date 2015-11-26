@@ -8,12 +8,12 @@
     <h2>Contents</h2>
     <div>
         <ul>
-        <li><a href="/mixi/authorize">Try Authorization Flow</a></li>
-        <li><a href="/mixi/id_token">ID Token Validator</a></li>
+        <li><a href="[% uri_for('/mixi/authorize') %]">Try Authorization Flow</a></li>
+        <li><a href="[% uri_for('/mixi/id_token') %]">ID Token Validator</a></li>
         </ul>
     </div>
     <div>
-        <p><a href="/">Back</a></p>
+        <p><a href="[% uri_for('/') %]">Back</a></p>
     </div>
 </div>
 

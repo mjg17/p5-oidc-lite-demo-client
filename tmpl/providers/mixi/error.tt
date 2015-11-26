@@ -20,7 +20,7 @@
         [% END %]
     </div>
     <div>
-        <p><a href="/mixi">Back</a></p>
+        <p><a href="[% uri_for('/mixi') %]">Back</a></p>
     </div>
 </div>
 

@@ -23,7 +23,7 @@
         <pre>Content : [% info.userinfo_response %]</pre>
     </div>
     <div>
-        <p><a href="/sample">Back</a></p>
+        <p><a href="[% uri_for('/sample') %]">Back</a></p>
     </div>
 </div>
 

@@ -18,7 +18,7 @@
 
         <!--
         If you want to know more detail, 
-        <form method="POST" action="/microsoft/id_token">
+        <form method="POST" action="[% uri_for('/microsoft/id_token') %]">
         <input type="hidden" name="id_token" id="id_token" value="[% info.id_token.string %]">
         <button type="submit" class="btn btn-primary"> Validate this ID Token</button>
         </form>
@@ -32,7 +32,7 @@
         <pre>Content : [% info.userinfo_response %]</pre>
     </div>
     <div>
-        <p><a href="/microsoft">Back</a></p>
+        <p><a href="[% uri_for('/microsoft') %]">Back</a></p>
     </div>
 </div>
 

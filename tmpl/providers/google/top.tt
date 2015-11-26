@@ -8,13 +8,13 @@
     <h2>Contents</h2>
     <div>
         <ul>
-        <li><a href="/google/authorize">Try Authorization Flow</a></li>
-        <li><a href="/google/id_token">ID Token Validator</a></li>
+        <li><a href="[% uri_for('/google/authorize') %]">Try Authorization Flow</a></li>
+        <li><a href="[% uri_for('/google/id_token') %]">ID Token Validator</a></li>
         <li><a href="https://developers.google.com/accounts/cookbook/technologies/OpenID-Connect">Documentation</a></li>
         </ul>
     </div>
     <div>
-        <p><a href="/">Back</a></p>
+        <p><a href="[% uri_for('/') %]">Back</a></p>
     </div>
 </div>
 

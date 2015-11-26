@@ -8,11 +8,11 @@
     <h2>Contents</h2>
     <div>
         <ul>
-        <li><a href="/sample/authorize">Try Authorization Flow</a></li>
+        <li><a href="[% uri_for('/sample/authorize') %]">Try Authorization Flow</a></li>
         </ul>
     </div>
     <div>
-        <p><a href="/">Back</a></p>
+        <p><a href="[% uri_for('/') %]">Back</a></p>
     </div>
 </div>
 

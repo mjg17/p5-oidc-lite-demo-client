@@ -18,7 +18,7 @@
         <pre>header : [% info.id_token.header %]</pre>
         <pre>payload : [% info.id_token.payload %]</pre>
         If you want to know more detail, 
-        <form method="POST" action="/facebook/id_token">
+        <form method="POST" action="[% uri_for('/facebook/id_token') %]">
         <input type="hidden" name="id_token", id="id_token" value="[% info.id_token.string %]">
         <button type="submit" class="btn btn-primary"> Validate this ID Token</button>
         </form>
@@ -32,7 +32,7 @@
         <pre>Content : [% info.userinfo_response %]</pre>
     </div>
     <div>
-        <p><a href="/facebook">Back</a></p>
+        <p><a href="[% uri_for('/facebook') %]">Back</a></p>
     </div>
 </div>
 
