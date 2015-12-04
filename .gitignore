@@ -1,6 +1,7 @@
 Makefile
 /inc/
 MANIFEST
+*~
 *.bak
 *.swp
 *.old
