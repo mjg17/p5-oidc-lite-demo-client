@@ -6,6 +6,7 @@ use Amon2::Web::Dispatcher::Lite;
 # Servers
 use OIDC::Lite::Demo::Client::Web::C::Sample;
 use OIDC::Lite::Demo::Client::Web::C::Google;
+use OIDC::Lite::Demo::Client::Web::C::ORCID;
 use OIDC::Lite::Demo::Client::Web::C::Facebook;
 use OIDC::Lite::Demo::Client::Web::C::Microsoft;
 use OIDC::Lite::Demo::Client::Web::C::YahooJapan;
@@ -55,6 +56,29 @@ get '/google/callback' => sub {
 any '/google/id_token' => sub {
     my ($c) = @_;
     return OIDC::Lite::Demo::Client::Web::C::Google->id_token($c)
+};
+
+
+# ORCID demo client
+get '/orcid' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::ORCID->default($c)
+};
+
+get '/orcid/authorize' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::ORCID->authorize($c)
+};
+
+get '/orcid/callback' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::ORCID->callback($c)
+};
+
+# ORCID id_token validator
+any '/orcid/id_token' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::ORCID->id_token($c)
 };
 
 

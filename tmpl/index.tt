@@ -11,6 +11,7 @@
         <li><a href="[% uri_for('/sample') %]">OIDC::Lite::Demo::Server</a></li>
         <li><a href="[% uri_for('/mixi') %]">mixi</a></li>
         <li><a href="[% uri_for('/google') %]">Google</a></li>
+        <li><a href="[% uri_for('/orcid') %]">ORCID</a></li>
         <li><a href="[% uri_for('/yahoo_japan') %]">Yahoo Japan YConnect</a></li>
         <li><a href="[% uri_for('/facebook') %]">Facebook</a></li>
         <li><a href="[% uri_for('/microsoft') %]">Microsoft</a></li>

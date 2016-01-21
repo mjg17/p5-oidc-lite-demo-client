@@ -1,0 +1,23 @@
+[% WRAPPER 'include/layout.tt' %]
+
+[% INCLUDE "providers/orcid/include/header.tt" %]
+
+<hr />
+
+<div>
+    <h2>Contents</h2>
+    <div>
+        <ul>
+        <li><a href="[% uri_for('/orcid/authorize') %]">Try Authorization Flow</a></li>
+        <li><a href="[% uri_for('/orcid/id_token') %]">ID Token Validator</a></li>
+        <li><a href="https://developers.orcid.com/accounts/cookbook/technologies/OpenID-Connect">Documentation</a></li>
+        </ul>
+    </div>
+    <div>
+        <p><a href="[% uri_for('/') %]">Back</a></p>
+    </div>
+</div>
+
+<hr />
+
+[% END %]
