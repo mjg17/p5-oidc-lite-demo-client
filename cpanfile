@@ -14,7 +14,7 @@ requires 'Test::WWW::Mechanize::PSGI'     , '0';
 requires 'Time::Piece'                    , '1.20';
 requires 'Teng'                           , '0.19';
 
-requires 'OAuth::Lite2'                   , '0.07';
+requires 'OAuth::Lite2'                   , '0.10_02';
 requires 'OIDC::Lite'                     , '0.06';
 requires 'Crypt::OpenSSL::Random'         , '0.10';
 requires 'Crypt::OpenSSL::CA'             , '0';
@@ -23,6 +23,10 @@ requires 'Crypt::OpenSSL::Bignum'         , '0';
 requires 'LWP::Protocol::https'           , '0';
 requires 'DBI'                            , '1.633';
 
+# MJG attempt to get ORCID https via proxy working
+# requires 'HTTP::Tiny'                     , '0'; # no luck - different I/F
+# requires 'LWP::Curl'                      , '0'; # missing libcurl headers
+requires 'LWP::Protocol::connect'         , '0';
 
 on 'configure' => sub {
    requires 'Module::Build', '0.38';
