@@ -28,6 +28,18 @@ requires 'DBI'                            , '1.633';
 # requires 'LWP::Curl'                      , '0'; # missing libcurl headers
 requires 'LWP::Protocol::connect'         , '0';
 
+requires 'Plack::Middleware::Debug'       , '0';
+
+# MJG Plack tests
+requires 'Web::Simple'                    , '0';
+
+# New Otter server dependency
+requires 'Hash::Merge::Simple'            , '0';
+
+requires 'CHI'                            , '0';
+requires 'CHI::Driver::DBI'               , '0';
+requires 'CHI::Driver::Memcached'         , '0';
+
 on 'configure' => sub {
    requires 'Module::Build', '0.38';
    requires 'Module::CPANfile', '0.9010';
