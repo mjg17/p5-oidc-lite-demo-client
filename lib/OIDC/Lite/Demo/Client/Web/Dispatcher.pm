@@ -5,6 +5,7 @@ use utf8;
 use Amon2::Web::Dispatcher::Lite;
 # Servers
 use OIDC::Lite::Demo::Client::Web::C::Sample;
+use OIDC::Lite::Demo::Client::Web::C::Otter;
 use OIDC::Lite::Demo::Client::Web::C::Google;
 use OIDC::Lite::Demo::Client::Web::C::ORCID;
 use OIDC::Lite::Demo::Client::Web::C::Facebook;
@@ -33,6 +34,29 @@ get '/sample/authorize' => sub {
 get '/sample/callback' => sub {
     my ($c) = @_;
     return OIDC::Lite::Demo::Client::Web::C::Sample->callback($c)
+};
+
+
+# Otter demo client
+get '/otter' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::Otter->default($c)
+};
+
+get '/otter/authorize' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::Otter->authorize($c)
+};
+
+get '/otter/callback' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::Otter->callback($c)
+};
+
+# Otter id_token validator
+any '/otter/id_token' => sub {
+    my ($c) = @_;
+    return OIDC::Lite::Demo::Client::Web::C::Otter->id_token($c)
 };
 
 
