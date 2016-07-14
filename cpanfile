@@ -30,8 +30,17 @@ requires 'LWP::Protocol::connect'         , '0';
 
 requires 'Plack::Middleware::Debug'       , '0';
 
-# MJG Plack tests
+# MJG Plack devs
 requires 'Web::Simple'                    , '0';
+requires 'Web::Machine'                   , '0';
+
+# MJG Otter Test support - usually present on deskpro
+requires 'Test::Class::Most'              , '0';
+# needed for t/classes.t, but not the web auth stuff:
+requires 'Config::IniFiles'               , '0';
+requires 'Mac::PropertyList'              , '0';
+requires 'Proc::ProcessTable'             , '0';
+requires 'Types::Standard'                , '0';
 
 # New Otter server dependency
 requires 'Hash::Merge::Simple'            , '0';
